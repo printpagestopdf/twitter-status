@@ -313,9 +313,10 @@ export class TwitterStatus extends Seed {
       </div>
     `;
   }
-
+ 
   private get footerTemplate(): TemplateResult {
     return html`
+		${this._status.card}
       <div id="footer">
         <div id="actions">
           <a href="${this._status.replyUrl}" target="_blank" rel="noopener" title="reply">${this.replyIcon}</a>
