@@ -69,10 +69,14 @@ export class Status {
       return;
     }
   }
-
+ 
   public get text(): string {
     const media = this.firstMedia;
     return media ? this._data.full_text.replace(media.url, '').trim() : this._data.full_text;
+  }
+  
+  public get card(): string {
+    return this._data.card ? this._data.card : '<div>ABER HGALLO</div>';
   }
 
   public get entities(): EntitiesData {
